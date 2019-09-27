@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVA Projet Personne.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/CompteBanq.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/Personne.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/Eleve.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/EleveDigital.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Enseignant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/IATOS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Personnel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/Personne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Eleve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/EleveDigital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/IATOS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Personnel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +25,7 @@
   <component name="ProjectId" id="1QvF5dXaYvjvDOvZBPUFufqfznh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -99,6 +77,14 @@
       <option name="presentableId" value="Default" />
       <updated>1568642980660</updated>
     </task>
+    <task id="LOCAL-00001" summary="v2">
+      <created>1569573601774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569573601774</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +97,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
