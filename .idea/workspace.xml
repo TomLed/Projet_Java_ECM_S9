@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVA Projet Personne.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/CompteBanq.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/Personne.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/Eleve.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/EleveDigital.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Enseignant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/IATOS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Personnel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/Personne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Eleve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/EleveDigital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/IATOS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Personnel.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1QvF5dXaYvjvDOvZBPUFufqfznh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne" />
+      <recent name="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve" />
+      <recent name="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel" />
+      <recent name="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company" />
+      <recent name="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Personne/Personnel" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="JAVA Projet Personne" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="" />
+      <created>1568642980660</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568642980660</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/personne/Personne.java</url>
+          <line>28</line>
+          <properties class="com.company.Personne" method="toString">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/personne/Personne.java</url>
+          <line>17</line>
+          <properties class="com.company.Personne" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/personne/CompteBanq.java</url>
+          <line>47</line>
+          <properties class="com.company.CompteBanq" method="setSolde">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
