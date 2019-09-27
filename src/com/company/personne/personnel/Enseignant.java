@@ -1,6 +1,7 @@
 package com.company.personne.personnel;
 
 import com.company.personne.personnel.Personnel;
+import org.w3c.dom.ls.LSOutput;
 
 public class Enseignant extends Personnel {
     private String echelon;
@@ -74,19 +75,16 @@ public class Enseignant extends Personnel {
     }
 
 
-    protected double calculSalaire(){
+    protected double calculSalaire() {
         // Définition de la méthode abstraite de la classe Personnel
-        salaire = fixe *( 1 + 1/tempsTravail * (heuresSupplementaires - dechargeHeures) * (25/100));
+        salaire = fixe * (1 + 1 / tempsTravail * (heuresSupplementaires - dechargeHeures) * (25 / 100));
         // Pas sur du fonctionnement des décharges d'heure ???
         // On choisit arbitrairement un taux de majoration de 25% pour les heures supplémentaires
-        if (serviceRealise() == true){
+        if (serviceRealise() == true) {
             salaire += prime;
-        // On décide arbitrairement que la prime (qui est la meme pour tous les enseignants) est de 300
+            // On décide arbitrairement que la prime (qui est la meme pour tous les enseignants) est de 300
         }
         return salaire;
 
     }
-
-    // test github
-
 }
