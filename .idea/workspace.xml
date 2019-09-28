@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Collegien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Collegien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Ecolier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Ecolier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Lyceen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Lyceen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Scolaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Scolaire.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569575957123</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajout des classes Collégien, Lycéen et Ecolier, création de l'interface Scolaire">
+      <created>1569679527520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569679527520</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,7 +129,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v2" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Ajout des classes Collégien, Lycéen et Ecolier, création de l'interface Scolaire" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des classes Collégien, Lycéen et Ecolier, création de l'interface Scolaire" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

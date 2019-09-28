@@ -18,12 +18,25 @@ public class Collegien extends Enfant{
         this.niveauCollegien = niveauCollegien;
     }
 
-    public void setPasseUnExamen(boolean passeUnExamen) {
-        this.passeUnExamen = passeUnExamen;
+    public void setPasseUnExamen() {
+        // Au collège on ne passe un examen que quand on est en 3ème, la plus grande des classes
+        passeUnExamen = grand();
     }
 
     public boolean isPasseUnExamen() {
         return passeUnExamen;
+    }
+
+    public boolean petit(){
+        return niveauCollegien.equals("6ème");
+    }
+
+    public boolean grand(){
+        return niveauCollegien.equals("3ème");
+    }
+
+    public boolean moyen(){
+        return (!petit() && !grand());
     }
 }
 

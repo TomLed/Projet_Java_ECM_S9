@@ -22,8 +22,21 @@ public class Lyceen extends Enfant{
         return passeUnExamen;
     }
 
-    public void setPasseUnExamen(boolean passeUnExamen) {
-        this.passeUnExamen = passeUnExamen;
+    public void setPasseUnExamen() {
+        // Au lycée on passe un examen en Terminale, la dernière classe, ou en 1ère, la classe moyenne
+        passeUnExamen = (grand() || moyen());
+    }
+
+    public boolean petit(){
+        return niveauLyceen.equals("2nde");
+    }
+
+    public boolean grand(){
+        return niveauLyceen.equals("Terminale");
+    }
+
+    public boolean moyen(){
+        return (!petit() && !grand());
     }
 
 }

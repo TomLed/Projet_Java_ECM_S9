@@ -17,4 +17,16 @@ public class Ecolier extends Enfant {
     public String getNiveauEcolier() {
         return niveauEcolier;
     }
+
+    public boolean petit(){
+        return niveauEcolier.equals("CP");
+    }
+
+    public boolean grand(){
+        return niveauEcolier.equals("CM2");
+    }
+
+    public boolean moyen(){
+        return (!grand() && !petit());
+    }
 }
