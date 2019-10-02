@@ -1,6 +1,6 @@
 package com.company.enfant;
 
-public class Enfant {
+public class Enfant{
     protected String Nom;
     protected String Prenom;
     protected int anneeNaissance;

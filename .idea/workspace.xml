@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/Electromenager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/Habit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/IPublicite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/ISolde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/IVendreKilo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/IVendrePiece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/Primeur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/pasEntre0et100Exception.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Collegien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Collegien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Ecolier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Ecolier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Enfant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Enfant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Lyceen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Lyceen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Scolaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Scolaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569679527520</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout des classes Collégien, Lycéen et Ecolier, création de l'interface Scolaire">
+      <created>1569681458198</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569681458198</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,8 +171,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/personne/CompteBanq.java</url>
-          <line>47</line>
-          <properties class="com.company.CompteBanq" method="setSolde">
+          <line>48</line>
+          <properties class="com.company.personne.CompteBanq" method="setSolde">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="3" />

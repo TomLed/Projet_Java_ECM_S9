@@ -1,5 +1,6 @@
 package com.company.personne;
 
+import com.company.magasin.Magasin;
 import com.company.personne.Personne;
 
 public class CompteBanq {

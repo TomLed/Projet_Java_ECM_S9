@@ -1,6 +1,6 @@
 package com.company.enfant;
 
-public class Collegien extends Enfant{
+public class Collegien extends Enfant implements Scolaire{
     private static String niveauxClasses [] = {"6ème", "5ème", "4ème", "3ème"};
     private String niveauCollegien;
     boolean passeUnExamen;
