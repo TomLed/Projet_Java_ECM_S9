@@ -1,8 +1,6 @@
 package com.company.magasin;
 
-import com.company.magasin.MagasinExceptions.MagasinException;
-import com.company.magasin.MagasinExceptions.VenteALaPieceException;
-import com.company.magasin.MagasinExceptions.pasDeStockException;
+import com.company.magasin.MagasinExceptions.*;
 import com.company.personne.CBException.CodeCompteException;
 import com.company.personne.CBException.CompteException;
 import com.company.personne.CBException.DecouvertCompteException;
@@ -30,8 +28,11 @@ public class Magasin implements IVendrePiece{
         listeStock = new ArrayList<>();
         this.code1 = code1;
         this.code2 = code2;
-        CB = new CompteBanq(code1,code2);
-        CB.setMagasin(this);
+        CB = new CompteBanq(this, code1,code2);
+    }
+
+    public CompteBanq getCB() {
+        return CB;
     }
 
     public String getNom() {
@@ -74,31 +75,35 @@ public class Magasin implements IVendrePiece{
     }
 
     public void vendre(Article article, double quantite, CompteBanq cb_client, String code_client) throws MagasinException, CompteException {
-        if (listeStock.contains(article)){
-            double prix = article.getPrixRemise()*quantite;
-            int intQuantite = (int) quantite;
-            double doubleQuantite = (double)intQuantite;
-            if(article.venteALaPiece && doubleQuantite != quantite){
-                throw new VenteALaPieceException();
+        if (cb_client.getClient().calculAge() < 10) {
+            throw new ageException();
+        }
+        else if(article instanceof Alcool && cb_client.getClient().calculAge() < 18){
+            throw new mineurException();
+        }
+        else {
+            if (listeStock.contains(article)) {
+                double prix = article.getPrixRemise() * quantite;
+                int intQuantite = (int) quantite;
+                double doubleQuantite = (double) intQuantite;
+                if (article.venteALaPiece && doubleQuantite != quantite) {
+                    throw new VenteALaPieceException();
+                } else if (article.quantite - quantite < 0) {
+                    throw new pasDeStockException();
+                } else {
+                    article.quantite -= quantite;
                 }
-            else if(article.quantite - quantite < 0){
+                try {
+                    cb_client.retrait(prix, code_client);
+                    CB.versement(prix, code1);
+                    System.out.println("Paiement effectué, veuillez retirer votre carte bancaire");
+                } catch (CompteException e) {
+                    article.quantite += quantite;
+                    throw e;
+                }
+            } else {
                 throw new pasDeStockException();
             }
-            else{
-                article.quantite -= quantite;
-            }
-            try{
-                cb_client.retrait(prix, code_client);
-                CB.versement(prix,code1);
-                System.out.println("Paiement effectué, veuillez retirer votre carte bancaire");
-            }
-            catch(CompteException e){
-                article.quantite += quantite;
-                throw e;
-            }
-        }
-        else{
-            throw new pasDeStockException();
         }
     }
 

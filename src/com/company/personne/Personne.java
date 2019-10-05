@@ -40,7 +40,13 @@ public class Personne {
     }
 
     private int anneeNaissance (String NumSecu){
-        anneeNaissance = Integer.parseInt(NumSecu.substring(1,2));
+        int an_naissance = Integer.parseInt(NumSecu.substring(1,3));
+        if(an_naissance<=19){
+            anneeNaissance = 2000 + an_naissance;
+        }
+        else{
+            anneeNaissance = 1900 + an_naissance;
+        }
         return anneeNaissance;
     }
 
@@ -58,12 +64,13 @@ public class Personne {
     }
 
     private int deptNaissance (String NumSecu){
-        deptNaissance = Integer.parseInt(NumSecu.substring(5,6));
+        deptNaissance = Integer.parseInt(NumSecu.substring(5,7));
         return deptNaissance;
     }
 
-    private int calculAge(){
-        return 2019-anneeNaissance;
+    public int calculAge(){
+        // On suppose que personne n'a plus de 100 ans
+       return 2019 - anneeNaissance;
     }
 
 

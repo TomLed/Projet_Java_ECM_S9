@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/Alcool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/MagasinExceptions/ageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/MagasinExceptions/mineurException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/CompteBanq.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/CompteBanq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/Personne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/Personne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/ISolde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/ISolde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/personne/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/Personne.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +153,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570305549243</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add .gitignore test">
+      <created>1570310727131</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570310727135</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add .gitignore test">
+      <created>1570310800284</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570310800284</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,7 +191,8 @@
     <MESSAGE value="Ajout de la classe Magasin et des classes exceptions. Il reste le main à écrire" />
     <MESSAGE value="Résolution de certaines erreurs dans les classes Personne, Note et élèves. Ajouts de tests pour certaines classes dans le main" />
     <MESSAGE value="Ajout de tests dans le main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de tests dans le main" />
+    <MESSAGE value="add .gitignore test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -180,7 +207,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/personne/CompteBanq.java</url>
-          <line>61</line>
+          <line>72</line>
           <properties class="com.company.personne.CompteBanq" method="setSolde">
             <option name="EMULATED" value="true" />
           </properties>

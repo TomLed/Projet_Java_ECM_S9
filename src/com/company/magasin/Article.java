@@ -47,8 +47,11 @@ public class Article implements IPublicite, ISolde{
 
     // Pour mettre en place des soldes
 
-    public void ActiverSolde(boolean yesorno) {
+    public void ActiverSolde(boolean yesorno, double taux) {
         solde = yesorno;
+        setTaux(taux);
+        setPrixRemise();
+
     }
 
     // Il faut rentrer le taux en pourcentage
@@ -62,7 +65,7 @@ public class Article implements IPublicite, ISolde{
 
     public void setPrixRemise(){
         if(solde == true){
-            prixRemise -= (double)taux/100 * prixRemise;
+            prixRemise -= (float)taux/100 * prixRemise;
         }
     }
 

@@ -18,11 +18,22 @@ public class CompteBanq {
     private String code1;
     private String code2;
 
+// Constructeur pour un compte bancaire de magasin
+    public CompteBanq (Magasin magasin,String code1, String code2){
+        // Par défaut le numéro du compte associé est incrémenté de 1 à chaque nouvelle création de compte
+        numCB ++;
+        this.magasin = magasin;
+        this.num = numCB;
+        this.code1 = code1;
+        this.code2 = code2;
+    }
 
-    public CompteBanq (String code1, String code2){
+    // Constructeur pour le compte bancaire d'une Personne
+    public CompteBanq (Personne client, String code1, String code2){
         // Par défaut le numéro du compte associé est incrémenté de 1 à chaque nouvelle création de compte
         numCB ++;
         this.num = numCB;
+        this.client = client;
         this.code1 = code1;
         this.code2 = code2;
     }
