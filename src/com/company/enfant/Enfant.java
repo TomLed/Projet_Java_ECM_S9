@@ -21,20 +21,12 @@ public class Enfant{
         return Nom;
     }
 
-    public void setPrenom(String prenom) {
-        Prenom = prenom;
-    }
-
     public String getPrenom() {
         return Prenom;
     }
 
     public int getAnneeNaissance() {
         return anneeNaissance;
-    }
-
-    public void setSexe(char sexe) {
-        this.sexe = sexe;
     }
 
     public char getSexe() {

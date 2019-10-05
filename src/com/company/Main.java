@@ -1,18 +1,55 @@
 package com.company;
+import com.company.enfant.Collegien;
+import com.company.enfant.Enfant;
+import com.company.enfant.Lyceen;
+import com.company.magasin.Magasin;
 import com.company.personne.CompteBanq;
 import com.company.personne.Personne;
 import com.company.personne.PersonneException.NumSecuException;
+import com.company.personne.eleve.EleveDigital;
+import com.company.personne.eleve.Note;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        //test classes enfant
+        Lyceen lePetitNicolas = new Lyceen("Petit", "Nicolas", 1996, 'm', 78, "31 rue du Chemin Vert", "2nde");
+        System.out.println("Le Petit Nicolas est en: " + lePetitNicolas.getNiveauLyceen());
+        System.out.println("A la question passe-t-il un examen, la réponse est " + lePetitNicolas.isPasseUnExamen());
+        Collegien lePetitJean = new Collegien("Petit", "Jean", 1996, 'm', 78, "31 rue du Chemin Vert", "3ème");
+        System.out.println("Le Petit Jean est en: " + lePetitJean.getNiveauCollegien());
+        System.out.println("A la question passe-t-il un examen, la réponse est " + lePetitJean.isPasseUnExamen());
+
+        //test classes élèves
+
+        try{
+            EleveDigital antoine = new EleveDigital("Dupont", "Antoine", "153426", "26 rue du truc", 1786537, 2019, 2020);
+        }
+        catch (NumSecuException e){
+            System.out.println("Problème concernant le numéro de Sécurité Sociale de l'élève de Digital Antoine " + e.getMessage());
+        }
         try {
-            Personne thomas = new Personne("", "Thomas", "75324132", "1342");
+            EleveDigital thomas = new EleveDigital("Ledar", "Thomas", "1674352648291", "26 rue du machin", 1786537, 2019, 2200);
+            Note premiereNote = new Note("JAVA", 20, 30, true);
+            Note deuxiemeNote = new Note("Réseau", 15, 30, true);
+            thomas.ajoutNote(premiereNote);
+            thomas.ajoutNote(deuxiemeNote);
+            thomas.afficherNote();
+        }
+        catch (NumSecuException e){
+            System.out.println("Problème concernant le numéro de Sécurité Sociale de l'élève de Digital Thomas " + e.getMessage());
+        }
+
+        try {
+            Personne etienne = new Personne("", "Thomas", "1324167543232", "1342");
         } catch (NumSecuException e) {
             System.out.println(e.getMessage());
         }
+
+        //test Classes Personnel
+        
     }
 }
 

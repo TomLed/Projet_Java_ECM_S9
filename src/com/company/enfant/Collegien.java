@@ -24,6 +24,7 @@ public class Collegien extends Enfant implements Scolaire{
     }
 
     public boolean isPasseUnExamen() {
+        setPasseUnExamen();
         return passeUnExamen;
     }
 

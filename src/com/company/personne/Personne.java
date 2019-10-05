@@ -18,12 +18,19 @@ public class Personne {
 
 
     public Personne (String Nom, String Prenom, String NumSecu, String Adresse) throws NumSecuException{
-        this.Nom = Nom;
-        this.Prenom = Prenom;
-        this.Adresse = Adresse;
-        this.anneeNaissance = anneeNaissance(NumSecu);
-        this.sexe = sexe(NumSecu);
-        this.deptNaissance = deptNaissance(NumSecu);
+        if (NumSecu.length() == 13){
+            this.Nom = Nom;
+            this.Prenom = Prenom;
+            this.Adresse = Adresse;
+            this.NumSecu = NumSecu;
+            this.anneeNaissance = anneeNaissance(NumSecu);
+            this.sexe = sexe(NumSecu);
+            this.deptNaissance = deptNaissance(NumSecu);
+        }
+        else{
+            throw new NumSecuException();
+        }
+
     }
 
     @Override
@@ -38,10 +45,10 @@ public class Personne {
     }
 
     private char sexe(String NumSecu) throws NumSecuException {
-        if(NumSecu.substring(1).equals("1")){
+        if (NumSecu.substring(0,1).equals("1")){
             this.sexe = 'M';
         }
-        if(NumSecu.substring(1).equals("2")){
+        else if (NumSecu.substring(0,1).equals("2")){
             this.sexe = 'F';
         }
         else{

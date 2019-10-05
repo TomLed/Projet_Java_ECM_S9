@@ -1,40 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="Ajout de la classe Magasin et des classes exceptions. Il reste le main à écrire">
-      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/MagasinExceptions/MagasinException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/MagasinExceptions/VenteALaPieceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/MagasinExceptions/pasDeStockException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/magasin/MagasinExceptions/pasEntre0et100Exception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/CBException/CodeCompteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/CBException/CompteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/CBException/DecouvertCompteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/personne/PersonneException/NumSecuException.java" afterDir="false" />
+    <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/CompteBanq.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/CompteBanq.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/Personne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/Personne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/Eleve.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/Eleve.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/EleveDigital.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/EleveDigital.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Enseignant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Enseignant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/IATOS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/IATOS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Personnel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Personnel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/enfant/BB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/BB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Electromenager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Electromenager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Habit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Habit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/IVendreKilo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/IVendrePiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/IVendrePiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Primeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Primeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/CompteBanq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Collegien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Collegien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/enfant/Enfant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enfant/Enfant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/personne/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/Personne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/eleve/Eleve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Eleve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/personne/PersonneException/NumSecuException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/PersonneException/NumSecuException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/personne/eleve/EleveDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/EleveDigital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/personnel/IATOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/IATOS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/personnel/Personnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Personnel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570027120806</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajout de la classe Magasin et des classes exceptions. Il reste le main à écrire">
+      <created>1570293218978</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570293218978</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,7 +166,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/personne/Personne.java</url>
-          <line>30</line>
+          <line>37</line>
           <properties class="com.company.personne.Personne" method="toString">
             <option name="EMULATED" value="true" />
           </properties>
@@ -189,7 +174,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/personne/CompteBanq.java</url>
-          <line>62</line>
+          <line>61</line>
           <properties class="com.company.personne.CompteBanq" method="setSolde">
             <option name="EMULATED" value="true" />
           </properties>
