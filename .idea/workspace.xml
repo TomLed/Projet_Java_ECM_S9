@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Enseignant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Enseignant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/IATOS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/IATOS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Personnel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/personnel/Personnel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/magasin/Magasin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Enseignant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/personnel/IATOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/IATOS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/personnel/Personnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/personnel/Personnel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570297716733</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Ajout de tests dans le main">
+      <created>1570305549243</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570305549243</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +164,8 @@
     <MESSAGE value="Ajout des classes Article, Electromenager, Habit, Primeur et des interfaces IPublicite, ISolde, IVendreKilo et IVendrePiece. Il faut encore implémenter les classe Magasin et pasEntre0et100Exception" />
     <MESSAGE value="Ajout de la classe Magasin et des classes exceptions. Il reste le main à écrire" />
     <MESSAGE value="Résolution de certaines erreurs dans les classes Personne, Note et élèves. Ajouts de tests pour certaines classes dans le main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Résolution de certaines erreurs dans les classes Personne, Note et élèves. Ajouts de tests pour certaines classes dans le main" />
+    <MESSAGE value="Ajout de tests dans le main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de tests dans le main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
