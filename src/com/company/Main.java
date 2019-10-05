@@ -3,12 +3,17 @@ import com.company.enfant.Collegien;
 import com.company.enfant.Enfant;
 import com.company.enfant.Lyceen;
 import com.company.magasin.Magasin;
+import com.company.magasin.MagasinExceptions.MagasinException;
+import com.company.personne.CBException.CodeCompteException;
+import com.company.personne.CBException.CompteException;
 import com.company.personne.CompteBanq;
 import com.company.personne.Personne;
 import com.company.personne.PersonneException.NumSecuException;
 import com.company.personne.eleve.EleveDigital;
 import com.company.personne.eleve.Note;
-
+import com.company.personne.personnel.Enseignant;
+import com.company.personne.personnel.IATOS;
+import com.company.magasin.*;
 import java.util.Scanner;
 
 public class Main {
@@ -49,7 +54,53 @@ public class Main {
         }
 
         //test Classes Personnel
-        
+        Habit jean = new Habit("Jean Levi's", 70);
+        Habit veste = new Habit("Veste Levi's", 124);
+        Habit luxe = new Habit("sac Gucci", 1300);
+        Habit calecon = new Habit ("DIM", 10);
+        try {
+            Enseignant Mariam = new Enseignant("Kiki", "Mariam", "2374864538193", "45, rue du bidulchouette", "2024", "PROF", true);
+            Mariam.setTempsTravail(132);
+            System.out.println("Le salaire de Mariam est de " + Mariam.calculSalaire() + " €");
+            CompteBanq compteBanqMariam = new CompteBanq("1234", "4321");
+            compteBanqMariam.setClient(Mariam);
+            try {
+                compteBanqMariam.versement(Mariam.calculSalaire(), "1234");
+
+                Magasin leviStore = new Magasin("Levi's Store", "31 rue de la soif", 23, "5678", "8765");
+                leviStore.ajouterDuCapital(5000);
+                leviStore.acheterArticle(jean, 2);
+                System.out.println("Le magasin a " + jean.getQuantite() + " jeans en stock");
+                leviStore.acheterArticle(veste, 3);
+                leviStore.acheterArticle(luxe, 1);
+                leviStore.acheterArticle(calecon,23);
+                System.out.println(leviStore.CB.getSolde());
+                leviStore.vendre(jean, 1, compteBanqMariam, "1234");
+                try{
+                    leviStore.vendre(luxe, 1, compteBanqMariam, "1234");
+                } catch (CompteException e){
+                    System.out.println(e.getMessage());
+                }
+                try{
+                    leviStore.vendre(veste, 4, compteBanqMariam, "1234");
+                }catch (MagasinException e){
+                    System.out.println(e.getMessage());
+                }
+                try{
+                    leviStore.vendre(calecon, 2.7, compteBanqMariam, "1234");
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
+            }
+            catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+        }
+        catch(NumSecuException e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Mariam vient d'acheter un jean. Elle n'a pas pu acheter le vêtement de luxe car elle n'a pas assez d'argent.\nElle n'a pas pu acheter les 4 vestes car il n'y en a pas assez en stock.\nElle n'a pas pu acheter de caleçon car ils se vendent à la pièce et elle en demandait 2,7. \nLe magasin a encore " + jean.getQuantite() +" jeans en stock");
+
     }
 }
 

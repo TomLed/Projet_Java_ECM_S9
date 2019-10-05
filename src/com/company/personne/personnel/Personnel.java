@@ -7,7 +7,7 @@ public abstract class Personnel extends Personne {
     // La classe ne doit pas pouvoir avoir d'instance. Donc classe abstraite
     String dateEntree;
     protected int tempsTravail;
-    protected int salaire;
+    protected double salaire;
     private boolean tempsPlein;
 
     public Personnel(String Nom, String Prenom, String NumSecu, String Adresse, String dateEntree, boolean tempsPlein) throws NumSecuException {

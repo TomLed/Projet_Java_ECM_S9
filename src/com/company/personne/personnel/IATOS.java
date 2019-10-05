@@ -25,7 +25,7 @@ public class IATOS extends Personnel {
     }
 
     protected double calculSalaire(){
-        return salaire = fixe * (1 + 1/100 * (25/100) * heuresSupplementaires);
+        return salaire = fixe * (1 + (float)1/100 * (0.25) * heuresSupplementaires);
         // On suppose que le temps de travail d'un IATOS est de 100h
         // On choisit arbitrairement un taux de majoration de 25% pour les heures supplémentaires
     }

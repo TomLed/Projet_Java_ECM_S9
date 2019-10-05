@@ -11,9 +11,9 @@ public class Enseignant extends Personnel {
     private int heuresSupplementaires;
     private int dechargeHeures;
     private int fixe;
-    private int fixeMDC;
-    private int fixePRAG;
-    private int fixePROF;
+    private static int fixeMDC;
+    private static int fixePRAG;
+    private static int fixePROF;
     private int prime;
 
     public Enseignant(String Nom, String Prenom, String NumSecu, String Adresse, String dateEntree, String echelon, boolean tempsPlein) throws NumSecuException {
@@ -21,13 +21,16 @@ public class Enseignant extends Personnel {
         this.echelon = echelon;
         if (echelon.equals("MDC"));
             tempsService = 192;
+            setFixeMDC(1200);
             fixe = fixeMDC;
         if (echelon.equals("PRAG")){
             tempsService = 384;
+            setFixePRAG(1200);
             fixe = fixePRAG;
         }
         if (echelon.equals("PROF")){
             tempsService = 96;
+            setFixePROF(1200);
             fixe = fixePROF;
         }
     }
@@ -76,9 +79,9 @@ public class Enseignant extends Personnel {
     }
 
 
-    protected double calculSalaire() {
+    public double calculSalaire() {
         // Définition de la méthode abstraite de la classe Personnel
-        salaire = fixe * (1 + 1 / tempsTravail * (heuresSupplementaires - dechargeHeures) * (25 / 100));
+        salaire = fixe * (1 + (float)1 / tempsTravail * (heuresSupplementaires - dechargeHeures) * 0.25);
         // Pas sur du fonctionnement des décharges d'heure ???
         // On choisit arbitrairement un taux de majoration de 25% pour les heures supplémentaires
         if (serviceRealise() == true) {

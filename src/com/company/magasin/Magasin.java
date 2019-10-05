@@ -17,7 +17,7 @@ public class Magasin implements IVendrePiece{
     private int nbVendeurs;
     private ArrayList<Article> listeStock;
     // Pour l'instant on considère la caisse comme une valeur de type double qui correpsond à l'argent qu'elle contient
-    private CompteBanq CB;
+    public CompteBanq CB;
     // Les codes pour le compte bancaire du magasin
     private String code1;
     private String code2;
@@ -30,7 +30,7 @@ public class Magasin implements IVendrePiece{
         listeStock = new ArrayList<>();
         this.code1 = code1;
         this.code2 = code2;
-        CB = new CompteBanq("code1","code2");
+        CB = new CompteBanq(code1,code2);
         CB.setMagasin(this);
     }
 
@@ -78,7 +78,7 @@ public class Magasin implements IVendrePiece{
             double prix = article.getPrixRemise()*quantite;
             int intQuantite = (int) quantite;
             double doubleQuantite = (double)intQuantite;
-            if(article.venteALaPiece && intQuantite != doubleQuantite){
+            if(article.venteALaPiece && doubleQuantite != quantite){
                 throw new VenteALaPieceException();
                 }
             else if(article.quantite - quantite < 0){
