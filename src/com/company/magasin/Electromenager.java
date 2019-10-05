@@ -2,9 +2,9 @@ package com.company.magasin;
 
 public class Electromenager extends Article {
 
-    public Electromenager (String nom, int quantite, double prixInitial){
+    public Electromenager (String nom, double prixInitial){
         // Les articles d'électroménager se vendent à la pièce
-        super(nom, quantite, "Le futur s'installe chez vous", prixInitial, true);
+        super(nom,"Le futur s'installe chez vous", prixInitial, true);
     }
 
 

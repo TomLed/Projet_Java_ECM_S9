@@ -1,88 +1,100 @@
 package com.company.personne;
 
 import com.company.magasin.Magasin;
+import com.company.personne.CBException.CodeCompteException;
+import com.company.personne.CBException.CompteException;
+import com.company.personne.CBException.DecouvertCompteException;
 import com.company.personne.Personne;
 
 public class CompteBanq {
 
-    private String num;
+    private int num;
+    private static int numCB;
+    //Le compte bancaire peut être possédé par une personne ou un magasin
+    private Magasin magasin;
     private Personne client;
-    private float solde;
-    private float decouvertAutorise;
+    private double solde;
+    private double decouvertAutorise;
     private String code1;
     private String code2;
 
 
-    public CompteBanq (String num, Personne client, String code1, String code2){
-        this.num = num;
-        this.client = client;
+    public CompteBanq (String code1, String code2){
+        // Par défaut le numéro du compte associé est incrémenté de 1 à chaque nouvelle création de compte
+        numCB ++;
+        this.num = numCB;
         this.code1 = code1;
         this.code2 = code2;
     }
 
     // Setters et Getters de la classe
 
-    public String getNum (){
+    public int getNum (){
         return num;
+    }
+
+    public void setClient(Personne client) {
+        this.client = client;
+    }
+
+    public void setMagasin(Magasin magasin) {
+        this.magasin = magasin;
+    }
+
+    public Magasin getMagasin() {
+        return magasin;
     }
 
     public Personne getClient (){
         return client;
     }
 
-    public float getSolde (){
+    public double getSolde (){
         return solde;
     }
 
-    public float getDecouvertAutorise(){
+    public double getDecouvertAutorise(){
         return decouvertAutorise;
     }
 
-    public String getCode1(){
-        return code1;
-    }
 
-    public String getCode2(){
-        return code2;
-    }
  // on pourrait aussi faire rentrer le code dynmiquement
-    public void setSolde(float nouveauSolde, String codeRentre){
-        if (codeRentre == code1){
+    public void setSolde(double nouveauSolde, String codeRentre) throws CodeCompteException{
+        if (codeRentre.equals(code1)){
             this.solde = nouveauSolde;
         }
         else {
-            System.out.println("Le code saisi est incorrect");
-        }
-    }
-    public void setDecouvertAutorise(float nouveauDecouvertAutorise, String codeRentre){
-        if (codeRentre == code2){
-            this.decouvertAutorise = nouveauDecouvertAutorise;
-        }
-        else {
-            System.out.println("Le code saisi est incorrect");
+            throw new CodeCompteException();
         }
     }
 
-    public void versement(int somme, String codeRentre){
+    public void setDecouvertAutorise(double nouveauDecouvertAutorise, String codeRentre) throws CodeCompteException{
+        if (codeRentre.equals(code2)){
+            this.decouvertAutorise = nouveauDecouvertAutorise;
+        }
+        else {
+            throw new CodeCompteException();
+        }
+    }
+
+    public void versement(double somme, String codeRentre) throws CodeCompteException{
         if (codeRentre.equals(code1)){
            solde += somme;
         }
         else{
-            System.out.println("Le code saisi est incorrect");
+            throw new CodeCompteException();
         }
     }
 
-    public void retrait (int somme, String codeRentre){
+    public void retrait (double somme, String codeRentre) throws CompteException {
         // sinon ne fonctionne pas dans main avec entrée utilisateur. Because you are checking if the objects are equal, not if the object values are equal.
         if (codeRentre.equals(code1)){
             if(somme>solde){
-                System.out.println("Attention ! Vous souhaitez retirer une somme supérieure au solde de votre compte, ");
                 if(somme<=solde+decouvertAutorise){
-                    System.out.println("cependant votre découvert autorisé vous permez le retrait de la somme désirée");
                     solde -= somme;
                 }
                 else{
-                    System.out.println("de plus vous excédez votre découvert autorisé. Le retrait est impossible !");
+                    throw new DecouvertCompteException();
                 }
             }
             else{
@@ -90,7 +102,7 @@ public class CompteBanq {
             }
         }
         else{
-            System.out.println("Le code saisi est incorrect");
+            throw new CodeCompteException();
             }
     }
 }

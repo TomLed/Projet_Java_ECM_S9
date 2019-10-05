@@ -1,39 +1,21 @@
 package com.company;
 import com.company.personne.CompteBanq;
 import com.company.personne.Personne;
+import com.company.personne.PersonneException.NumSecuException;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Personne thomas = new Personne("", "Thomas");
-        CompteBanq CA = new CompteBanq("102", thomas, "salut", "lol");
-        CA.setSolde(1200,"salut");
-        CA.setDecouvertAutorise(10,"lol");
-        Scanner entree = new Scanner(System.in);
-        System.out.println("Quel est votre Nom ?");
-        String nom = entree.nextLine();
-        thomas.setNom(nom);
-        System.out.println(thomas.getNom());
-        System.out.println("Veuillez entrer votre code 1 ?");
-        String coderentre = entree.nextLine();
-        System.out.println("Souhaitez-vous réaliser un versement ou un retrait ? Tapez : 1 - Retrait 2 - Versement ");
-        int reponse = entree.nextInt();
-        if (reponse == 1){
-            System.out.println("Quelle somme souahitez vous retirer ?");
-            int somme = entree.nextInt();
-            CA.retrait(somme, coderentre);
-            System.out.println("Votre solde est désormais de :" + CA.getSolde());
+        try {
+            Personne thomas = new Personne("", "Thomas", "75324132", "1342");
+        } catch (NumSecuException e) {
+            System.out.println(e.getMessage());
         }
-        if (reponse == 2){
-            System.out.println("Quelle somme souahitez vous verser ?");
-            int somme = entree.nextInt();
-            CA.versement(somme, coderentre);
-            System.out.println("Votre solde est désormais de :" + CA.getSolde());
-        }
-        }
+    }
 }
+
 
 
 /*

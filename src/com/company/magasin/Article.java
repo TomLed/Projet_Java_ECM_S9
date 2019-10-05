@@ -3,16 +3,15 @@ package com.company.magasin;
 public class Article implements IPublicite, ISolde{
     protected String slogan;
     protected String nom;
-    protected int quantite;
+    protected double quantite;
     protected double prixInitial;
     protected double prixRemise;
     protected double taux;
     boolean venteALaPiece;
     boolean solde;
 
-    public Article(String nom, int quantite, String slogan, double prixInitial, boolean venteALaPiece){
+    public Article(String nom, String slogan, double prixInitial, boolean venteALaPiece){
         this.nom = nom;
-        this.quantite = quantite;
         this.slogan = slogan;
         this.prixInitial = prixInitial;
         this.prixRemise = prixInitial;
@@ -24,7 +23,12 @@ public class Article implements IPublicite, ISolde{
         return nom;
     }
 
-    public int getQuantite() {
+    // Mettre exception si article pièce et quantité pas entier
+    public void setQuantite(double quantite) {
+        this.quantite = quantite;
+    }
+
+    public double getQuantite() {
         return quantite;
     }
 
@@ -58,7 +62,7 @@ public class Article implements IPublicite, ISolde{
 
     public void setPrixRemise(){
         if(solde == true){
-            prixRemise -= (double) taux/100 * prixRemise;
+            prixRemise -= (double)taux/100 * prixRemise;
         }
     }
 

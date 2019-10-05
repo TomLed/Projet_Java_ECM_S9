@@ -1,5 +1,6 @@
 package com.company.personne.personnel;
 
+import com.company.personne.PersonneException.NumSecuException;
 import com.company.personne.personnel.Personnel;
 import org.w3c.dom.ls.LSOutput;
 
@@ -15,7 +16,7 @@ public class Enseignant extends Personnel {
     private int fixePROF;
     private int prime;
 
-    public Enseignant(String Nom, String Prenom, String NumSecu, String Adresse, String dateEntree, String echelon, boolean tempsPlein){
+    public Enseignant(String Nom, String Prenom, String NumSecu, String Adresse, String dateEntree, String echelon, boolean tempsPlein) throws NumSecuException {
         super(Nom, Prenom, NumSecu, Adresse, dateEntree, tempsPlein);
         this.echelon = echelon;
         if (echelon.equals("MDC"));

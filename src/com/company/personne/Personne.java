@@ -1,5 +1,7 @@
 package com.company.personne;
 
+import com.company.personne.PersonneException.NumSecuException;
+
 public class Personne {
     protected String Nom;
     protected String Prenom;
@@ -14,8 +16,8 @@ public class Personne {
         this.Prenom = Prenom;
     }
 
-    // 2ème constructeur. Dans l'énoncé ils demandent l'adresse ??? Je met le dept de naissance
-    public Personne (String Nom, String Prenom, String NumSecu, String Adresse){
+
+    public Personne (String Nom, String Prenom, String NumSecu, String Adresse) throws NumSecuException{
         this.Nom = Nom;
         this.Prenom = Prenom;
         this.Adresse = Adresse;
@@ -35,15 +37,15 @@ public class Personne {
         return anneeNaissance;
     }
 
-    private char sexe(String NumSecu){
-        if(NumSecu.substring(1) == "1"){
+    private char sexe(String NumSecu) throws NumSecuException {
+        if(NumSecu.substring(1).equals("1")){
             this.sexe = 'M';
         }
-        if(NumSecu.substring(1) == "2"){
+        if(NumSecu.substring(1).equals("2")){
             this.sexe = 'F';
         }
         else{
-            System.out.println("Le numéro de sécurité sociale ne commence ni par 1 ni par 2, il y a surement une erreur");
+            throw new NumSecuException();
             }
         return sexe;
     }
@@ -80,7 +82,7 @@ public class Personne {
         return NumSecu;
     }
 
-    public void setNumSecu (String nouveauNumSecu){
+    public void setNumSecu (String nouveauNumSecu) throws NumSecuException{
         this.NumSecu = nouveauNumSecu;
         this.anneeNaissance = anneeNaissance(nouveauNumSecu);
         this.sexe = sexe(nouveauNumSecu);

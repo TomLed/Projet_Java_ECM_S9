@@ -1,12 +1,13 @@
 package com.company.personne.personnel;
 
+import com.company.personne.PersonneException.NumSecuException;
 import com.company.personne.personnel.Personnel;
 
 public class IATOS extends Personnel {
     private int heuresSupplementaires;
     private int fixe;
 
-    public IATOS (String Nom, String Prenom, String NumSecu, String Adresse, String dateEntree, int heuresSupplementaires, boolean tempsPlein){
+    public IATOS (String Nom, String Prenom, String NumSecu, String Adresse, String dateEntree, int heuresSupplementaires, boolean tempsPlein) throws NumSecuException {
         super(Nom, Prenom, NumSecu, Adresse, dateEntree, tempsPlein);
         this.heuresSupplementaires = heuresSupplementaires;
     }
