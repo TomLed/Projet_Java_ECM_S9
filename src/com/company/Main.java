@@ -14,6 +14,10 @@ import com.company.personne.eleve.Note;
 import com.company.personne.personnel.Enseignant;
 import com.company.personne.personnel.IATOS;
 import com.company.magasin.*;
+import javafx.scene.chart.ScatterChart;
+import javafx.scene.transform.Scale;
+
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
@@ -30,23 +34,22 @@ public class Main {
 
         //test classes élèves
         System.out.println(" On réalise des tests de la classe Elèves\n");
-        try{
+        try {
             System.out.println("On créé un élève avec un némro de sécurité social incomplet");
             EleveDigital antoine = new EleveDigital("Dupont", "Antoine", "153426", "26 rue du truc", 1786537, 2019, 2020);
-        }
-        catch (NumSecuException e){
+        } catch (NumSecuException e) {
             System.out.println("Problème concernant le numéro de Sécurité Sociale de l'élève de Digital Antoine " + e.getMessage() + "\n\n");
         }
         try {
             System.out.println("On créé l'élève Thomas auquel on attribue une note de 20 en JAVA et 15 en réseau");
             EleveDigital thomas = new EleveDigital("Ledar", "Thomas", "1674352648291", "26 rue du machin", 1786537, 2019, 2200);
-            Note premiereNote = new Note("JAVA", 20, 30, true);
-            Note deuxiemeNote = new Note("Réseau", 15, 30, true);
+            Note premiereNote = new Note("JAVA", 20, 30);
+            Note deuxiemeNote = new Note("Réseau", 9, 30);
             thomas.ajoutNote(premiereNote);
             thomas.ajoutNote(deuxiemeNote);
             thomas.afficherNote();
-        }
-        catch (NumSecuException e){
+            System.out.println("Thomas a donc une moyenne de " + thomas.calculMoyenne() + ". Valide-t'il donc son semestre ? " + thomas.isValide());
+        } catch (NumSecuException e) {
             System.out.println("Problème concernant le numéro de Sécurité Sociale de l'élève de Digital Thomas " + e.getMessage());
         }
 
@@ -57,16 +60,16 @@ public class Main {
         jean.ActiverSolde(true, 10);
         Habit veste = new Habit("Veste Levi's", 124);
         Habit luxe = new Habit("sac Gucci", 1300);
-        Habit calecon = new Habit ("DIM", 10);
+        Habit calecon = new Habit("DIM", 10);
         Alcool ricard = new Alcool("Pastis", 15);
         try {
             Enseignant Mariam = new Enseignant("Kiki", "Mariam", "2024864538193", "45, rue du bidulchouette", "2024", "PROF", true);
             // On créé un enfant de moins de 10 ans
-            Personne Nicolas = new Personne("Nicolas", "Jean","1123526144896","565 zegfhzgf");
+            Personne Nicolas = new Personne("Nicolas", "Jean", "1123526144896", "565 zegfhzgf");
             Mariam.setTempsTravail(132);
             System.out.println("Le salaire de Mariam est de " + Mariam.calculSalaire() + " €");
             CompteBanq compteBanqMariam = new CompteBanq(Mariam, "1234", "4321");
-            CompteBanq compteBanqNicolas = new CompteBanq(Nicolas, "1020","2010");
+            CompteBanq compteBanqNicolas = new CompteBanq(Nicolas, "1020", "2010");
             try {
                 compteBanqMariam.versement(Mariam.calculSalaire(), "1234");
                 System.out.println("Le salaire de Mariam est versé sur son compte");
@@ -77,49 +80,88 @@ public class Main {
                 System.out.println("Le magasin a " + jean.getQuantite() + " jeans en stock");
                 leviStore.acheterArticle(veste, 3);
                 leviStore.acheterArticle(luxe, 1);
-                leviStore.acheterArticle(calecon,23);
-                leviStore.acheterArticle(ricard,1);
-                System.out.println("Suite aux achats le compte bancaire du magasin a un solde de : " +leviStore.getCB().getSolde()+ " €\n");
+                leviStore.acheterArticle(calecon, 23);
+                leviStore.acheterArticle(ricard, 1);
+                System.out.println("Suite aux achats le compte bancaire du magasin a un solde de : " + leviStore.getCB().getSolde() + " €\n");
                 System.out.println("Achat par Mariam d'un jean soldé à " + jean.getPrixRemise() + "Le prix initial était de " + jean.getPrixInitial());
                 leviStore.vendre(jean, 1, compteBanqMariam, "1234");
-                try{
+                try {
                     System.out.println("Achat par Mariam d'un vêtement de luxe");
                     leviStore.vendre(luxe, 1, compteBanqMariam, "1234");
-                } catch (CompteException e){
+                } catch (CompteException e) {
                     System.out.println(e.getMessage());
                 }
-                try{
+                try {
                     System.out.println("Achat par Mariam de 4 vestes");
                     leviStore.vendre(veste, 4, compteBanqMariam, "1234");
-                }catch (MagasinException e){
+                } catch (MagasinException e) {
                     System.out.println(e.getMessage());
                 }
-                try{
+                try {
                     System.out.println("Achat par Mariam de 2,7 caleçons");
                     leviStore.vendre(calecon, 2.7, compteBanqMariam, "1234");
-                }catch (Exception e){
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
-                try{
+                try {
                     System.out.println("Achat par Mariam d'une bouteille de pastis");
-                    leviStore.vendre(ricard,1,compteBanqMariam,"1234");
-                } catch (Exception e){
+                    leviStore.vendre(ricard, 1, compteBanqMariam, "1234");
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
-                System.out.println("Mariam vient d'acheter un jean. Elle n'a pas pu acheter le vêtement de luxe car elle n'a pas assez d'argent.\nElle n'a pas pu acheter les 4 vestes car il n'y en a pas assez en stock.\nElle n'a pas pu acheter de caleçon car ils se vendent à la pièce et elle en demandait 2,7. \n Elle n'a pas pu acheter de pastis car elle n'a pas 18 ans. \nLe magasin a encore " + jean.getQuantite() +" jeans en stock");
+                System.out.println("Mariam vient d'acheter un jean. Elle n'a pas pu acheter le vêtement de luxe car elle n'a pas assez d'argent.\nElle n'a pas pu acheter les 4 vestes car il n'y en a pas assez en stock.\nElle n'a pas pu acheter de caleçon car ils se vendent à la pièce et elle en demandait 2,7. \n Elle n'a pas pu acheter de pastis car elle n'a pas 18 ans. \nLe magasin a encore " + jean.getQuantite() + " jeans en stock");
                 System.out.println("Suite aux achat il reste " + compteBanqMariam.getSolde() + " € sur le compte de Mariam\n");
                 // Maintenant on essaye de faire acheter à Nicolas qui a moins de 10 ans
                 System.out.println("Nicolas essaye d'acheter un calecon");
-                leviStore.vendre(calecon, 1,compteBanqNicolas,"1020");
+                leviStore.vendre(calecon, 1, compteBanqNicolas, "1020");
+            } catch (Exception e) {
+                System.out.println(e.getMessage()+ "\n\n");
             }
-            catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
-        }
-        catch(NumSecuException e){
+        } catch (NumSecuException e) {
             System.out.println(e.getMessage());
         }
 
+        // On permet à l'utilisateur de réaliser des actions bancaires et on les enregistre dans un fichier
+        System.out.println("Tests de la classe compte bancaire avec saisie clavier\n\n");
+        Personne luc = new Personne("", "Luc");
+        CompteBanq CA = new CompteBanq(luc, "salut", "lol");
+        try {
+            CA.setSolde(1200.0, "salut");
+            CA.setDecouvertAutorise(10.0F, "lol");
+        } catch (CompteException e) {
+            System.out.println(e.getMessage());
+        }
+        Scanner entree = new Scanner(System.in);
+        System.out.println("Bonjour " + luc.getPrenom());
+        System.out.println("Veuillez entrer votre code 1 ?");
+        String coderentre = entree.nextLine();
+        int reponse = 10;
+        while (reponse != 3) {
+            System.out.println(" Votre solde actuel est de " + CA.getSolde() + "\nSouhaitez-vous réaliser un versement ou un retrait ? Tapez : \n1 - Retrait \n2 - Versement \n3 - Arrêter");
+            reponse = entree.nextInt();
+            int somme;
+            try {
+                if (reponse == 1) {
+                    System.out.println("Quelle somme souahitez vous retirer ?");
+                    somme = entree.nextInt();
+                    CA.retrait(somme, coderentre);
+                    System.out.println("Votre solde est désormais de :" + CA.getSolde());
+                }
+
+                else if (reponse == 2) {
+                    System.out.println("Quelle somme souhaitez vous verser ?");
+                    somme = entree.nextInt();
+                    CA.versement(somme, coderentre);
+                    System.out.println("Votre solde est désormais de :" + CA.getSolde());
+                }
+                else {
+                    System.out.println("Fin de la transaction");
+                }
+
+            } catch (CompteException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }
 

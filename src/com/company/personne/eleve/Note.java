@@ -2,18 +2,19 @@ package com.company.personne.eleve;
 
 public class Note{
     String matiere;
-    int note;
+    double note;
     int creditsobtenus;
     boolean validation;
 
-    public Note(String matiere, int note, int creditsobtenus, boolean validation){
+    public Note(String matiere, double note, int creditsobtenus){
         this.matiere = matiere;
         this.note = note;
         this.creditsobtenus = creditsobtenus;
-        this.validation = validation;
+        setValidation();
+        this.validation = getValidation();
     }
 
-    public int getNote() {
+    public double getNote() {
         return note;
     }
 
@@ -41,8 +42,14 @@ public class Note{
         return validation;
     }
 
-    public void setValidation(boolean validation) {
-        this.validation = validation;
+    // Un élève ne valide une matière que si sa note est supérieure ou égale à 10
+    public void setValidation() {
+        if(this.note >= 10){
+            validation = true;
+        }
+        else {
+            validation = false;
+        }
     }
 
     public void afficherNote(){
