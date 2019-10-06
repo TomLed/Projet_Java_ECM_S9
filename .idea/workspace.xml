@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a121c03-7c5b-4de3-86a2-f775ccd5a7ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/recordBancaire.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/Eleve.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/Eleve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/EleveDigital.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA Projet Personne/com/company/personne/eleve/EleveDigital.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/eleve/Eleve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Eleve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/eleve/EleveDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/EleveDigital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/personne/eleve/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/personne/eleve/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570314893984</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Amélioration des classes Etudiant et du main pour y ajouter un test de la classe CompteBanq avec saisie clavier">
+      <created>1570394178452</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570394178452</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +195,8 @@
     <MESSAGE value="Ajout de tests dans le main" />
     <MESSAGE value="add .gitignore test" />
     <MESSAGE value="Ajout de la classe Alcool. Un mineur ne peut acheter d'alcool dans un magasin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la classe Alcool. Un mineur ne peut acheter d'alcool dans un magasin" />
+    <MESSAGE value="Amélioration des classes Etudiant et du main pour y ajouter un test de la classe CompteBanq avec saisie clavier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Amélioration des classes Etudiant et du main pour y ajouter un test de la classe CompteBanq avec saisie clavier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
